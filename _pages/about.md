@@ -3,8 +3,8 @@ layout: about
 title: about
 permalink: /
 subtitle: |
-  PhD student at <a href='https://chemistry.gatech.edu/'>GaTech</a>. Works on: <b>ionic liquids</b>,
-  <b>force field development</b>, and <b>high-throughput molecular dynamics</b>.
+  PhD student at <a href='https://chemistry.gatech.edu/'>GaTech</a>. Works on: <b>high-throughput molecular dynamics</b>,
+  <b>polarizable force fields</b>, and <b>ionic liquids</b>.
 
 profile:
   align: right
@@ -32,15 +32,21 @@ from the Krell Institute.
   }
 </style>
 
+<style>
+  .lower-font-size li {
+    font-size: 0.90em; /* You can adjust the value as needed */
+  }
+</style>
+
 <div class="desktop">
 <div class="row">
     <div class="col-5 pr-0">
     <div class="row justify-content-center">
     <ul class="lower-font-size"> 
     <h4>Interests</h4>
-    <li>High-throughput Molecular Dynamics</li>
-    <li>Ionic Liquids</li>
-    <li>Machine Learning & Force Field Development</li>
+    <li>Molecular Dynamics</li>
+    <li>ML for Force Fields</li>
+    <li>Computational Chemistry</li>
     </ul>
     </div> 
     </div>
@@ -48,8 +54,8 @@ from the Krell Institute.
     <div class="row justify-content-center">
     <ul class="lower-font-size">
     <h4>Education</h4>
-    <li>PhD in Chemistry.<be> GaTech, 2022-Present</li>
-    <li>MS in Aerospace Engineering.<br> UCLA, 2020-2022</li>
+    <li>PhD in Chemistry.<br>GaTech, 2022-Present</li>
+    <li>MS in Aerospace Engineering.<br> UCLA, 2020-2022</li>  
     <li>BS in Astronautical Engineering.<br> USC, 2015-2019</li>
     </ul> 
     </div>
@@ -57,4 +63,4 @@ from the Krell Institute.
 </div>
 </div>
 
-**Email**: `lastname [at] gatech.edu`
+**Email**: `firstname_lastname [at] berkeley.edu`
