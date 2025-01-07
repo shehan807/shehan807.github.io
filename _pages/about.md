@@ -2,7 +2,9 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: |
+  PhD student. Works on: <b>ionic liquids</b>,
+  <b>force field development</b>, and <b>high-throughput molecular dynamics</b>.
 
 profile:
   align: right
