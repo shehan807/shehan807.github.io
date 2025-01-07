@@ -20,7 +20,7 @@ talks:
   limit: 3 
 ---
 
-I am an Chemistry graduate student at GaTech, advised by [Jesse McDaniel]([http://people.eecs.berkeley.edu/~demmel/](https://chemistry.gatech.edu/people/jesse-mcdaniel)). 
+I am an Chemistry graduate student at GaTech, advised by [Jesse McDaniel](https://chemistry.gatech.edu/people/jesse-mcdaniel). 
 I completed my M.S. in Aerospace Engineering at UCLA, advised by [Richard Wirz](https://engineering.oregonstate.edu/people/richard-wirz).
 I'm supported by a Department of Energy [
 Computational Science Graduate Fellowship](https://www.krellinst.org/csgf/about-doe-csgf/news-events/2021-incoming-class)
