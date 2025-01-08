@@ -13,11 +13,9 @@ profile:
   more_info: 
 
 news: true # includes a list of news items
-latest_posts: false
+latest_posts: true
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
-talks:
-  limit: 3 
 ---
 
 I am a Chemistry graduate student at GaTech, advised by [Jesse McDaniel](https://chemistry.gatech.edu/people/jesse-mcdaniel). 
