@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I am excited to share my presentation at the 2024 IEPC in Toulouse, France was selected as the Best Paper of the Electrostatic Thrusters Session. The conference proceeding was invited for publication in a special issue of the (Journal of Electric Propulsion)[https://link.springer.com/journal/44205], which we hope to share soon! 
+I am excited to share my presentation at the 2024 IEPC in Toulouse, France was selected as the Best Paper of the Electrostatic Thrusters Session. The conference proceeding was invited for publication in a special issue of the [Journal of Electric Propulsion](https://link.springer.com/journal/44205), which we hope to share soon! 
