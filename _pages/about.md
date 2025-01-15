@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 subtitle: |
-  PhD student at <a href='https://chemistry.gatech.edu/'>GaTech</a>. Works on: <b>high-throughput molecular dynamics</b>,
+  PhD student at <a href='https://chemistry.gatech.edu/'>GaTech</a>. Works on: <b>high-throughput molecular dynamics</b>,<br>
   <b>polarizable force fields</b>, and <b>ionic liquids</b>.
 
 profile:
