@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I passed my wualifying exam!
+I passed my qualifying exam!
