@@ -1,38 +1,69 @@
+Buttons:
+- `abbr`: Adds an abbreviation to the left of the entry. You can add links to these by creating a venue.yaml-file in the \_data folder and adding entries that match.
+- `abstract`: Adds an "Abs" button that expands a hidden text field when clicked to show the abstract text
+- `altmetric`: Adds an [Altmetric](https://www.altmetric.com/) badge (Note: if DOI is provided just use `true`, otherwise only add the altmetric identifier here - the link is generated automatically)
+- `annotation`: Adds a popover info message to the end of the author list that can potentially be used to clarify superscripts. HTML is allowed.
+- `arxiv`: Adds a link to the Arxiv website (Note: only add the arxiv identifier here - the link is generated automatically)
+- `bibtex_show`: Adds a "Bib" button that expands a hidden text field with the full bibliography entry
+- `blog`: Adds a "Blog" button redirecting to the specified link
+- `code`: Adds a "Code" button redirecting to the specified link
+- `dimensions`: Adds a [Dimensions](https://www.dimensions.ai/) badge (Note: if DOI or PMID is provided just use `true`, otherwise only add the Dimensions' identifier here - the link is generated automatically)
+- `html`: Inserts an "HTML" button redirecting to the user-specified link
+- `pdf`: Adds a "PDF" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+- `poster`: Adds a "Poster" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+- `slides`: Adds a "Slides" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+- `supp`: Adds a "Supp" button to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
+- `video`: Adds a "Video" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/video/ directory)
+- `website`: Adds a "Website" button redirecting to the specified link
+
+Extra:
+- `preview`
+- `google_scholar_id`
+- `additional_info`
+- `award`
+- `award_name`
+- `eprint`
+
 @article{parmar2023_HAN_HEHN,
-author = {Parmar, Shehan M. and Depew, Daniel D. and Wirz, Richard E. and Vaghjiani, Ghanshyam L.},
-abstract = {Molecular dynamics simulations of binary mixtures comprising 2-hydroxyethylhydrazinium nitrate (HEHN) and hydroxylammonium nitrate (HAN) were conducted using the polarizable APPLE&P force field to investigate fundamental properties of multimode propulsion (MMP) propellants. Calculated densities as a function of temperature were in good agreement with experiments and similar simulations. The structural properties of neat HEHN and HAN–HEHN provided insights into their inherent, protic nature. Radial distribution functions (RDFs) identified key hydrogen bonding sites located at N–H···O and O–H···O within a first solvation shell of approximately 2 Å. Angular distribution functions further affirmed the relatively strong nature of the hydrogen bonds with nearly linear directionality. The increased hydroxylammonium cation (HA+) mole fraction shows the influence of competitively strong hydrogen bonds on the overall hydrogen bond network. Dominant spatial motifs via three-dimensional distribution functions along with nearly nanosecond-long hydrogen bond lifetimes highlight the local bonding environment that may precede proton transfer reactions.},
-title = {Structural Properties of HEHN- and HAN-Based Ionic Liquid Mixtures: A Polarizable Molecular Dynamics Study},
-journal = {The Journal of Physical Chemistry B},
-volume = {127},
-number = {40},
-pages = {8616-8633},
-keywords = {ionic liquids, polarizable force fields, molecular dynamics},
-doi = {10.1021/acs.jpcb.3c02649},
-url = {https://doi.org/10.1021/acs.jpcb.3c02649},
-year = {2023},
-bibtex_show={true},
-abbr = {JPC B},
-selected = {true},
-pdf = {parmar-et-al-2023-structural-properties-of-hehn-and-han-based-ionic-liquid-mixtures-a-polarizable-molecular-dynamics.pdf},
-award = {ACS Editors' Choice® is a collection designed to feature scientific articles of broad public interest.},
-award_name = {Editors' Choice},
-type = {journal}
+      author = {Parmar, Shehan M. and Depew, Daniel D. and Wirz, Richard E. and Vaghjiani, Ghanshyam L.},
+      abstract = {Molecular dynamics simulations of binary mixtures comprising 2-hydroxyethylhydrazinium nitrate (HEHN) and hydroxylammonium nitrate (HAN) were conducted using the polarizable APPLE&P force field to investigate fundamental properties of multimode propulsion (MMP) propellants. Calculated densities as a function of temperature were in good agreement with experiments and similar simulations. The structural properties of neat HEHN and HAN–HEHN provided insights into their inherent, protic nature. Radial distribution functions (RDFs) identified key hydrogen bonding sites located at N–H···O and O–H···O within a first solvation shell of approximately 2 Å. Angular distribution functions further affirmed the relatively strong nature of the hydrogen bonds with nearly linear directionality. The increased hydroxylammonium cation (HA+) mole fraction shows the influence of competitively strong hydrogen bonds on the overall hydrogen bond network. Dominant spatial motifs via three-dimensional distribution functions along with nearly nanosecond-long hydrogen bond lifetimes highlight the local bonding environment that may precede proton transfer reactions.},
+      title = {Structural Properties of HEHN- and HAN-Based Ionic Liquid Mixtures: A Polarizable Molecular Dynamics Study},
+      journal = {The Journal of Physical Chemistry B},
+      volume = {127},  
+      number = {40},
+      pages = {8616-8633},
+      keywords = {ionic liquids, polarizable force fields, molecular dynamics},
+      doi = {10.1021/acs.jpcb.3c02649},
+      url = {https://doi.org/10.1021/acs.jpcb.3c02649},
+      year = {2023},
+      bibtex_show={true},
+      abbr = {JPC B},
+      selected = {true},
+      pdf = {parmar-et-al-2023-structural-properties-of-hehn-and-han-based-ionic-liquid-mixtures-a-polarizable-molecular-dynamics.pdf},
+      award = {ACS Editors' Choice® is a collection designed to feature scientific articles of broad public interest.},
+      award_name = {Editors' Choice},
+      google_scholar_id = {UeHWp8X0CEIC},
+	    preview = {TOC_Parmar_10.png},
+      additional_info = {testing_additional_info},
+      type = {journal}
 }
 
 @article{parmar2024_N1888_TFSI,
-author = {Parmar, Shehan M. and Dean, William and Do, Changwoo and Browning, James F. and Klein, Jeffrey M. and Gurkan, Burcu E. and McDaniel, Jesse G.},
-title = {Structural Properties of [N1888][TFSI] Ionic Liquid: A Small Angle Neutron Scattering and Polarizable Molecular Dynamics Study},
-journal = {The Journal of Physical Chemistry B},
-volume = {128},
-number = {45},
-pages = {11313-11327},
-doi = {10.1021/acs.jpcb.4c06255},
-url = {https://doi.org/10.1021/acs.jpcb.4c06255},
-year = {2024},
-bibtex_show={true},
-abbr = {JPC B},
-selected={true},
-pdf = {parmar-et-al-2024-structural-properties-of-n1888-tfsi-ionic-liquid-a-small-angle-neutron-scattering-and-polarizable.pdf},
-abstract = {In this study, we investigate the quaternary ammonium-based ionic liquid (QAIL), methyltrioctylammonium bis(trifluoromethylsulfonyl)imide, [N1888][TFSI], utilizing small angle neutron scattering (SANS) measurements and polarizable molecular dynamics (MD) simulations to characterize the short- and long-range liquid structure. Scattering structure factors show signatures of three length scales in reciprocal space indicative of alternating polarity (k ∼ 0.44 Å–1), charge (k ∼ 0.75 Å–1), and neighboring or adjacent (k ∼ 1.46 Å–1) domains. Excellent agreement between simulation and experimental scattering structure factors validates various simulation analyses that provide detailed atomistic characterization of the different length scale correlations. The first solvation shell structure is illustrated by obtaining radial, angular, dihedral, and combined distribution functions, where two dominant spatial motifs, N+···N– and N+···O–, compete for optimal packing around the polar head of the [N1888]+ cation. Intermediate and long-range structures are governed by the balance between local electroneutrality and octyl chain networking, respectively. By computing the charge-correlation structure factor, SZZ, and the spatial extent of the octyl chain network using graph theory, the bulk-phase structure of [N1888][TFSI] is characterized in terms of electrostatic screening and apolar domain formation length scales. },
-type = {journal}
+      author = {Parmar, Shehan M. and Dean, William and Do, Changwoo and Browning, James F. and Klein, Jeffrey M. and Gurkan, Burcu E. and McDaniel, Jesse G.},
+      title = {Structural Properties of [N1888][TFSI] Ionic Liquid: A Small Angle Neutron Scattering and Polarizable Molecular Dynamics Study},
+      journal = {The Journal of Physical Chemistry B},
+      volume = {128},
+      number = {45},
+      pages = {11313-11327},
+      doi = {10.1021/acs.jpcb.4c06255},
+      url = {https://doi.org/10.1021/acs.jpcb.4c06255},
+      year = {2024},
+      bibtex_show={true},
+      abbr = {JPC B},
+      selected={true},
+      pdf = {parmar-et-al-2024-structural-properties-of-n1888-tfsi-ionic-liquid-a-small-angle-neutron-scattering-and-polarizable.pdf},
+      abstract = {In this study, we investigate the quaternary ammonium-based ionic liquid (QAIL), methyltrioctylammonium bis(trifluoromethylsulfonyl)imide, [N1888][TFSI], utilizing small angle neutron scattering (SANS) measurements and polarizable molecular dynamics (MD) simulations to characterize the short- and long-range liquid structure. Scattering structure factors show signatures of three length scales in reciprocal space indicative of alternating polarity (k ∼ 0.44 Å–1), charge (k ∼ 0.75 Å–1), and neighboring or adjacent (k ∼ 1.46 Å–1) domains. Excellent agreement between simulation and experimental scattering structure factors validates various simulation analyses that provide detailed atomistic characterization of the different length scale correlations. The first solvation shell structure is illustrated by obtaining radial, angular, dihedral, and combined distribution functions, where two dominant spatial motifs, N+···N– and N+···O–, compete for optimal packing around the polar head of the [N1888]+ cation. Intermediate and long-range structures are governed by the balance between local electroneutrality and octyl chain networking, respectively. By computing the charge-correlation structure factor, SZZ, and the spatial extent of the octyl chain network using graph theory, the bulk-phase structure of [N1888][TFSI] is characterized in terms of electrostatic screening and apolar domain formation length scales. },
+      google_scholar_id = {Y0pCki6q_DkC},
+	    preview = {TOC_N1888.png},
+      type = {journal}
 }
