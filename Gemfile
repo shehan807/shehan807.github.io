@@ -18,8 +18,12 @@ group :jekyll_plugins do
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
+    gem 'benchmark'
+    gem 'observer'
+    gem 'ostruct'
     gem 'unicode_utils'
     gem 'webrick'
+    gem 'listen'
 end
 group :other_plugins do
     gem 'css_parser'
