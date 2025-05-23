@@ -1,0 +1,192 @@
+- title: Invited Talks & Conference Presentations
+  type: time_table
+  contents:
+    - title: Microscopic Behavior of Battery Electrolytes through Molecular Dynamics Simulations
+      institution: SIAM Conference on Computational Science and Engineering (CSE25)
+      year: 2025
+      location: Fort Worth, TX
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2025_siam_cse25_battery.pdf
+
+    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid (IL) Behavior via Molecular Simulation
+      institution: ACS Spring 2025
+      year: 2025
+      location: San Diego, CA
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2025_acs_spring_lcst_poster.pdf
+
+    - title: Multimode Propellant Discovery - A Computational High-throughput Screening Paradigm
+      institution: International Electric Propulsion Conference
+      year: 2024
+      location: Toulouse, France
+      description:
+        - "<strong style='color: var(--global-theme-color);'>Best Paper Award</strong>"
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2024_iepc_multimode.pdf
+
+    - title: Molecular Simulation of Lower Critical Solution Temperature Ionic Liquids
+      institution: Ionic Liquids Gordon Research Conference
+      year: 2024
+      location: Newry, ME
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2024_grc_lcst_poster.pdf
+
+    - title: Ionic Liquids - Understanding Bulk and Interfacial Behavior
+      institution: 52nd Annual meeting of the Southeastern Theoretical Chemistry Association (SETCA)
+      year: 2024
+      location: Blacksburg, VA
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2024_setca_ionic_liquids.pdf
+
+    - title: Ionic Liquids - Understanding Behavior at Electrochemical Interfaces
+      institution: GaTech Career, Research, and Innovation Development Conference
+      year: 2024
+      location: Atlanta, GA
+      description:
+        - "<strong style='color: var(--global-theme-color);'>Poster Competition Award Recipient ($1500)</strong>"
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2024_gatech_cridc_poster.pdf
+
+    - title: Understanding the liquid structure of [N1888][TFSI] via polarizable molecular dynamics
+      institution: ACS Fall 2023 - Ionic Liquids Across Scales and Their Modern-Era Applications
+      year: 2023
+      location: San Francisco, CA
+      description:
+        - "Sponsored Poster by Pacific Northwest National Laboratory"
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2023_acs_fall_n1888_poster.pdf
+        - linkname: DOI
+          link: https://doi.org/10.1021/scimeetings.3c10301
+
+    - title: Understanding Ionic Liquids via Polarizable Molecular Dynamics
+      institution: Pacific Northwest National Laboratory Invited Seminar
+      year: 2023
+      location: Richland, WA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2023_pnnl_seminar.pdf
+
+    - title: Understanding the liquid structure of [N1888][TFSI] via polarizable molecular dynamics
+      institution: Poster Session for GaTech College of Sciences Advisory Board Member Meeting
+      year: 2023
+      location: Atlanta, GA
+      linkitems:
+        - linkname: Poster
+          link: /assets/pdf/talks/2023_gatech_advisory_poster.pdf
+
+    - title: Ionic Liquid Force Fields - Development and Applications
+      institution: Persson Research Group Final Summer Presentation, Lawrence Berkeley National Laboratory
+      year: 2023
+      location: Berkeley, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2023_lbnl_summer_final.pdf
+
+    - title: Understanding Ionic Liquid Structure via Polarizable Molecular Dynamics Simulations
+      institution: DOE CSGF Annual Program Review
+      year: 2023
+      location: Washington, DC
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2023_doe_csgf_review.pdf
+
+    - title: A Bayesian Data-driven Model for Quantifying Electrospray Lifetime
+      institution: International Electric Propulsion Conference
+      year: 2022
+      location: Boston, MA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_iepc_bayesian.pdf
+
+    - title: Insights from Polarizable Molecular Dynamics Simulations of HAN- and HEHN-based Ionic Liquid Mixtures
+      institution: Joint Army Navy NASA Air Force
+      year: 2022
+      location: Newport News, VA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_jannaf_han_hehn.pdf
+
+    - title: Multi-Physics and Data-Driven Modeling for Electrospray Propulsion
+      institution: DOE CSGF Annual Program Review
+      year: 2022
+      location: Arlington, VA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_doe_csgf_electrospray.pdf
+
+    - title: Structural, Thermophysical, and Dynamic Properties of Hydroxylammonium Nitrate (HAN) Water Mixtures at the Liquid-Vacuum Interface
+      institution: ACS Spring 2022 - Multiscale Chemistry and Dynamics at Surfaces and Interfaces
+      year: 2022
+      location: San Diego, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_acs_spring_han_interface.pdf
+
+    - title: Electrospray Plume Modeling for Rapid Life and Performance Analysis
+      institution: AIAA SciTech Forum and Exposition
+      year: 2022
+      location: San Diego, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_aiaa_scitech_plume.pdf
+
+    - title: Multi-Scale Modeling of Ionic Liquids for In-space Propulsion
+      institution: UCLA PSPL Spring Quarter Presentation
+      year: 2022
+      location: Los Angeles, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2022_ucla_pspl_spring.pdf
+
+    - title: Electrospray Plume Modeling for Performance and Lifetime Analysis
+      institution: UCLA PSPL Winter Quarter Presentation
+      year: 2021
+      location: Los Angeles, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2021_ucla_pspl_winter.pdf
+
+    - title: Introduction to Molecular Dynamics
+      institution: UCLA PSPL Fall Quarter Presentation
+      year: 2020
+      location: Los Angeles, CA
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2020_ucla_pspl_md_intro.pdf
+
+    - title: Particle Containment Assurance for Mars Sample Return Mission
+      institution: Senior Design Project Presentation at NASA JPL
+      year: 2019
+      location: Pasadena, CA
+      description:
+        - "Co-presented with K. Decker, J. Gaither, J. Swan"
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2019_jpl_senior_design.pdf
+
+    - title: Micro-Cold Trap Detection and Characterization on the Lunar Surface
+      institution: Caltech SURF Presentation
+      year: 2018
+      location: Pasadena, CA
+      description:
+        - "Co-presented with S. Piqueux"
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2018_caltech_surf_lunar.pdf
+
+    - title: Reactive Molecular Dynamics Analysis of Spacecraft Monopropellants
+      institution: USC Undergraduate Research Symposium
+      year: 2018
+      location: Los Angeles, CA
+      description:
+        - "Co-presented with D. Depew, M. Gilpin"
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2018_usc_symposium_reactive_md.pdf

@@ -1,0 +1,143 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <article>
+    <div class="publications">
+      {% for entry in site.data.talks %}
+        <div class="talks-section">
+          {% if entry.title %}
+            <h3 class="talks-section-title">{{ entry.title }}</h3>
+          {% endif %}
+          
+          {% if entry.type == 'time_table' %}
+            <ol class="bibliography">
+              {% for talk in entry.contents %}
+                <li>
+                  <div class="row">
+                    {% if talk.year %}
+                      <div class="col-sm-2 text-center talk-year">
+                        <span class="badge font-weight-bold text-uppercase" style="background-color: var(--global-theme-color); color: white; min-width: 75px; padding: 0.5em;">
+                          {{ talk.year }}
+                        </span>
+                        {% if talk.location %}
+                          <p class="location-text">
+                            <i class="fa-solid fa-location-dot"></i>
+                            {{ talk.location }}
+                          </p>
+                        {% endif %}
+                      </div>
+                    {% endif %}
+                    
+                    <div class="col-sm-10 talk-content">
+                      {% if talk.title %}
+                        <h6 class="talk-title font-weight-bold">{{ talk.title }}</h6>
+                      {% endif %}
+                      
+                      {% if talk.institution %}
+                        <div class="talk-institution">
+                          {{ talk.institution }}
+                        </div>
+                      {% endif %}
+                      
+                      {% if talk.description %}
+                        <ul class="talk-description">
+                          {% for item in talk.description %}
+                            <li>{{ item }}</li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                      
+                      {% if talk.linkitems %}
+                        <div class="links">
+                          {% for link in talk.linkitems %}
+                            {% if link.link %}
+                              <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
+                                {{ link.linkname | default: "Link" }}
+                              </a>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      {% endif %}
+                    </div>
+                  </div>
+                </li>
+              {% endfor %}
+            </ol>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </article>
+</div>
+
+<style>
+.talks-section {
+  margin-bottom: 3rem;
+}
+
+.talks-section-title {
+  color: var(--global-theme-color);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.talk-year {
+  margin-bottom: 0.5rem;
+}
+
+.location-text {
+  font-size: 0.875rem;
+  color: var(--global-text-color);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.talk-content {
+  padding-left: 1rem;
+}
+
+.talk-title {
+  font-weight: bolder;
+  margin-bottom: 0.5rem;
+}
+
+.talk-institution {
+  color: var(--global-text-color);
+  margin-bottom: 0.5rem;
+  margin-top: -0.25rem;
+}
+
+.talk-description {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Add dividing lines between talks using theme color */
+.publications ol.bibliography li {
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.publications ol.bibliography li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .talk-content {
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+}
+</style>
