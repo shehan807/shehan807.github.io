@@ -151,7 +151,11 @@
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% if entry.booktitle %}
+        {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {% else %}
+        {% capture entrytype %}<em>In Conference Proceedings</em>{% endcapture %}
+      {% endif %}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
@@ -165,6 +169,8 @@
     {% endif %}
     {% if entry.location %}
       {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.location }}{% endcapture %}
+    {% elsif entry.address %}
+      {% capture entrytype %}{{ entrytype }}{{ ", " }}{{ entry.address }}{% endcapture %}
     {% endif -%}
     {% if entry.additional_info %}
       {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
