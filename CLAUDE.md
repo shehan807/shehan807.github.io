@@ -1,2 +1,0 @@
-- These change's look ok, but be very careful when deleting lines of code that were in the original fork, it will be very hard to track your changes when I want to reference the original fork and these lines are missing.
-- make sure you explain why you are making a change simply and clearly
