@@ -429,6 +429,16 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// Contact note section at bottom of about page
+.contact-note-section {
+  text-align: center;
+  margin-top: 2rem;
+  
+  .contact-note {
+    font-size: 0.8rem;
+  }
+}
+
 .wechat-modal {
   display: none;
   position: fixed;
