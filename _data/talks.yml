@@ -24,6 +24,8 @@
       description:
         - "<strong style='color: var(--global-theme-color);'>Best Paper Award</strong>"
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/2024_iepc_multimode.jpg
         - linkname: Slides
           link: /assets/pdf/talks/2024_iepc_multimode.pdf
 
@@ -32,16 +34,12 @@
       year: 2024
       location: Newry, ME
       linkitems:
-        - linkname: Poster
-          link: /assets/pdf/talks/2024_grc_lcst_poster.pdf
 
     - title: Ionic Liquids - Understanding Bulk and Interfacial Behavior
       institution: 52nd Annual meeting of the Southeastern Theoretical Chemistry Association (SETCA)
       year: 2024
       location: Blacksburg, VA
       linkitems:
-        - linkname: Poster
-          link: /assets/pdf/talks/2024_setca_ionic_liquids.pdf
 
     - title: Ionic Liquids - Understanding Behavior at Electrochemical Interfaces
       institution: GaTech Career, Research, and Innovation Development Conference
@@ -50,6 +48,8 @@
       description:
         - "<strong style='color: var(--global-theme-color);'>Poster Competition Award Recipient ($1500)</strong>"
       linkitems:
+        - linkname: How it started :)
+          link: /assets/pdf/talks/2024_gatech_cridc_poster.jpg
         - linkname: Poster
           link: /assets/pdf/talks/2024_gatech_cridc_poster.pdf
 
@@ -60,8 +60,6 @@
       description:
         - "Sponsored Poster by Pacific Northwest National Laboratory"
       linkitems:
-        - linkname: Poster
-          link: /assets/pdf/talks/2023_acs_fall_n1888_poster.pdf
         - linkname: DOI
           link: https://doi.org/10.1021/scimeetings.3c10301
 
@@ -70,31 +68,25 @@
       year: 2023
       location: Richland, WA
       linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2023_pnnl_seminar.pdf
 
     - title: Understanding the liquid structure of [N1888][TFSI] via polarizable molecular dynamics
       institution: Poster Session for GaTech College of Sciences Advisory Board Member Meeting
       year: 2023
       location: Atlanta, GA
       linkitems:
-        - linkname: Poster
-          link: /assets/pdf/talks/2023_gatech_advisory_poster.pdf
 
     - title: Ionic Liquid Force Fields - Development and Applications
       institution: Persson Research Group Final Summer Presentation, Lawrence Berkeley National Laboratory
       year: 2023
       location: Berkeley, CA
       linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2023_lbnl_summer_final.pdf
 
     - title: Understanding Ionic Liquid Structure via Polarizable Molecular Dynamics Simulations
       institution: DOE CSGF Annual Program Review
       year: 2023
       location: Washington, DC
       linkitems:
-        - linkname: Slides
+        - linkname: Poster
           link: /assets/pdf/talks/2023_doe_csgf_review.pdf
 
     - title: A Bayesian Data-driven Model for Quantifying Electrospray Lifetime
@@ -109,16 +101,13 @@
       institution: Joint Army Navy NASA Air Force
       year: 2022
       location: Newport News, VA
-      linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2022_jannaf_han_hehn.pdf
 
     - title: Multi-Physics and Data-Driven Modeling for Electrospray Propulsion
       institution: DOE CSGF Annual Program Review
       year: 2022
       location: Arlington, VA
       linkitems:
-        - linkname: Slides
+        - linkname: Poster
           link: /assets/pdf/talks/2022_doe_csgf_electrospray.pdf
 
     - title: Structural, Thermophysical, and Dynamic Properties of Hydroxylammonium Nitrate (HAN) Water Mixtures at the Liquid-Vacuum Interface
@@ -141,17 +130,12 @@
       institution: UCLA PSPL Spring Quarter Presentation
       year: 2022
       location: Los Angeles, CA
-      linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2022_ucla_pspl_spring.pdf
 
     - title: Electrospray Plume Modeling for Performance and Lifetime Analysis
       institution: UCLA PSPL Winter Quarter Presentation
       year: 2021
       location: Los Angeles, CA
       linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2021_ucla_pspl_winter.pdf
 
     - title: Introduction to Molecular Dynamics
       institution: UCLA PSPL Fall Quarter Presentation
@@ -168,7 +152,7 @@
       description:
         - "Co-presented with K. Decker, J. Gaither, J. Swan"
       linkitems:
-        - linkname: Slides
+        - linkname: Poster
           link: /assets/pdf/talks/2019_jpl_senior_design.pdf
 
     - title: Micro-Cold Trap Detection and Characterization on the Lunar Surface
@@ -176,17 +160,13 @@
       year: 2018
       location: Pasadena, CA
       description:
-        - "Co-presented with S. Piqueux"
-      linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2018_caltech_surf_lunar.pdf
+        - "Advised by Sylvain Piqueux and Catherine Elder, Jet Propulsion Laboratory, California Institute of Technology"
+      abstract: "Lunar micro-cold traps are putative centimeter-scale (or larger) regions cold enough for ice or other volatiles to be trapped and stable over long time periods on planetary bodies. The objective of this project was to demonstrate their existence on the Moon and characterize their properties. The southern hemisphere of the Moon, particularly at latitudes 85° and higher, exhibits partially or permanently shaded regions with sub-110 K temperatures as demonstrated by Lunar Reconnaissance Orbiter Diviner reflected solar and emitted infrared radiances measured through nine spectral channels. Micro-cold traps, however, are sub-resolution and thus too small to be detected directly by Diviner. But near Noon, because they are surrounded by the otherwise warm (illuminated) regolith, multispectral observations should result in anisothermal behavior (i.e. variable brightness temperature as a function of wavelength due to the uniqueness of Planck curves associated with black or grey bodies). Deconvolving these Planck curves yields the properties of the end members (fractional area and brightness temperature), demonstrating that micro-cold traps could be present in the field of view, although not resolved. This approach has been successfully used to map sub-resolution rocks or Mars and the Moon, leveraging the fact that rocks are warmer at night than the surrounding terrains due to their high thermal inertias. Anisothermality has been indeed observed at various locations of the South Pole, with cold end-members consistent with water ice trapping temperatures (110 K or lower), and warm surrounding regolith. Areal fraction of micro-cold trap can mathematically can range from 40 to 100% to match the observations (depending on the temperature of the warm endmember) but should realistically remain closer to the lower bound. Future lunar sampling missions may want to consider sampling micro cold traps."
 
     - title: Reactive Molecular Dynamics Analysis of Spacecraft Monopropellants
       institution: USC Undergraduate Research Symposium
       year: 2018
       location: Los Angeles, CA
-      description:
-        - "Co-presented with D. Depew, M. Gilpin"
       linkitems:
-        - linkname: Slides
+        - linkname: Poster
           link: /assets/pdf/talks/2018_usc_symposium_reactive_md.pdf

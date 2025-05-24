@@ -47,7 +47,6 @@ layout: default
                           {{ talk.institution }}
                         </div>
                       {% endif %}
-                      
                       {% if talk.description %}
                         <ul class="talk-description">
                           {% for item in talk.description %}
@@ -55,16 +54,27 @@ layout: default
                           {% endfor %}
                         </ul>
                       {% endif %}
-                      
-                      {% if talk.linkitems %}
+                      {% if talk.linkitems or talk.abstract %}
                         <div class="links">
-                          {% for link in talk.linkitems %}
-                            {% if link.link %}
-                              <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
-                                {{ link.linkname | default: "Link" }}
-                              </a>
-                            {% endif %}
-                          {% endfor %}
+                          {% if talk.abstract %}
+                            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+                          {% endif %}
+                          {% if talk.linkitems %}
+                            {% for link in talk.linkitems %}
+                              {% if link.link %}
+                                <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
+                                  {{ link.linkname | default: "Link" }}
+                                </a>
+                              {% endif %}
+                            {% endfor %}
+                          {% endif %}
+                        </div>
+                      {% endif %}
+                      
+                      {% if talk.abstract %}
+                        <!-- Hidden abstract -->
+                        <div class="abstract hidden">
+                          <p>{{ talk.abstract }}</p>
                         </div>
                       {% endif %}
                     </div>
@@ -116,11 +126,15 @@ layout: default
   margin-top: -0.25rem;
 }
 
-.talk-description {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.publications ul.talk-description {
+  margin-top: 0.25rem;
+  margin-bottom: -1rem;
   padding-left: 1.5rem;
   font-size: 0.95rem;
+}
+
+.links {
+  margin-top: 0.5rem;
 }
 
 /* Add dividing lines between talks using theme color */
