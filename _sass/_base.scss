@@ -205,6 +205,19 @@ ul.task-list input[type="checkbox"] {
       margin: 0;
     }
   }
+  
+  .social-icons-under-profile {
+    margin-top: 1rem;
+    text-align: center;
+    
+    .contact-icons {
+      font-size: 2rem;
+      
+      a {
+        margin: 0 0.15rem;
+      }
+    }
+  }
 }
 
 .profile.float-right {
@@ -223,6 +236,18 @@ ul.task-list input[type="checkbox"] {
       p {
         display: block;
       }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .profile {
+    width: 60%;
+    margin: 0 auto 1rem auto;
+    float: none !important;
+    
+    .social-icons-under-profile {
+      margin-top: 0.5rem;
     }
   }
 }

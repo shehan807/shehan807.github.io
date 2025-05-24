@@ -35,6 +35,13 @@ layout: default
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+        {% if page.social %}
+          <div class="social-icons-under-profile">
+            <div class="contact-icons">
+              {% include social.liquid %}
+            </div>
+          </div>
+        {% endif %}
       </div>
     {% endif %}
 
@@ -67,11 +74,9 @@ layout: default
       {% include selected_papers.liquid %}
     {% endif %}
 
-    <!-- Social -->
-    {% if page.social %}
-      <div class="social">
-        <div class="contact-icons">{% include social.liquid %}</div>
-
+    <!-- Contact Note -->
+    {% if site.contact_note %}
+      <div class="contact-note-section">
         <div class="contact-note">{{ site.contact_note }}</div>
       </div>
     {% endif %}
