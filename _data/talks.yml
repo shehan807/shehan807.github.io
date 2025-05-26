@@ -26,8 +26,8 @@
       linkitems:
         - linkname: <i class="fa-solid fa-camera fa-xl"></i>
           link: /assets/pdf/talks/2024_iepc_multimode.jpg
-        - linkname: Slides
-          link: /assets/pdf/talks/2024_iepc_multimode.pdf
+        #- linkname: Slides
+        #  link: /assets/pdf/talks/2024_iepc_multimode.pdf
 
     - title: Molecular Simulation of Lower Critical Solution Temperature Ionic Liquids
       institution: Ionic Liquids Gordon Research Conference
