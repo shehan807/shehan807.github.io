@@ -21,7 +21,7 @@ social: true # includes social icons at the bottom of the page
 I am a Chemistry graduate student at GaTech, advised by [Jesse McDaniel](https://chemistry.gatech.edu/people/jesse-mcdaniel). 
 I completed my M.S. in Aerospace Engineering at UCLA, advised by [Richard Wirz](https://engineering.oregonstate.edu/people/richard-wirz).
 I'm supported by a Department of Energy [
-Computational Science Graduate Fellowship](https://www.krellinst.org/csgf/about-doe-csgf/news-events/2021-incoming-class)
+Computational Science Graduate Fellowship](https://www.krellinst.org/csgf/profile/parmar2021)
 from the Krell Institute.
 
 <style>
