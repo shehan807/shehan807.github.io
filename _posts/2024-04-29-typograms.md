@@ -6,6 +6,7 @@ description: this is what included typograms code could look like
 tags: formatting diagrams
 categories: sample-posts
 typograms: true
+published: false  # al-folio template example - commented out for clean blog
 ---
 
 This is an example post with some [typograms](https://github.com/google/typograms/) code.

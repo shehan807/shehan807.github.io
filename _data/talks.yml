@@ -1,9 +1,19 @@
 - title: Invited Talks & Conference Presentations
   type: time_table
   contents:
+    - title: "Discovering Ionic Liquid Materials for Low Temperature Water Desalination: A High-throughput Molecular Dynamics Approach"
+      institution: GaTech Career, Research, and Innovation Development Conference (CRIDC)
+      year: 2025
+      month: February
+      location: Atlanta, GA
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_CDRIC_022025.jpg
+
     - title: Microscopic Behavior of Battery Electrolytes through Molecular Dynamics Simulations
       institution: SIAM Conference on Computational Science and Engineering (CSE25)
       year: 2025
+      month: February
       location: Fort Worth, TX
       linkitems:
         - linkname: Slides
@@ -12,13 +22,41 @@
     - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid (IL) Behavior via Molecular Simulation
       institution: ACS Spring 2025
       year: 2025
+      month: March
       location: San Diego, CA
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_ACS_032025.jpg
         - linkname: Poster
           link: /assets/pdf/talks/2025_acs_spring_lcst_poster.pdf
 
+    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
+      institution: 2025 El-Sayed Spring Research Symposium
+      year: 2025
+      month: May
+      location: Atlanta, GA
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_GT_052025.jpg
+
+    - title: Ionic Liquid Materials Discovery - Towards First Principles-based Design
+      institution: DOE CSGF Annual Program Review
+      year: 2025
+      month: July
+      location: Washington, D.C.
+      linkitems:
+
+    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
+      institution: 2025 Chemistry and Physics of Liquids Conference Gordon Research Conference (GRC)
+      year: 2025
+      month: August
+      location: Plymouth, NH
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_GRC_082025.jpg
+
     - title: Multimode Propellant Discovery - A Computational High-throughput Screening Paradigm
-      institution: International Electric Propulsion Conference
+      institution: International Electric Propulsion Conference (IEPC)
       year: 2024
       location: Toulouse, France
       description:
@@ -30,24 +68,32 @@
         #  link: /assets/pdf/talks/2024_iepc_multimode.pdf
 
     - title: Molecular Simulation of Lower Critical Solution Temperature Ionic Liquids
-      institution: Ionic Liquids Gordon Research Conference
+      institution: Ionic Liquids Gordon Research Conference (GRC)
       year: 2024
+      month: August
       location: Newry, ME
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_GRC_082024.jpg
 
     - title: Ionic Liquids - Understanding Bulk and Interfacial Behavior
       institution: 52nd Annual meeting of the Southeastern Theoretical Chemistry Association (SETCA)
       year: 2024
+      month: May
       location: Blacksburg, VA
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_SETCA_052024.jpg
 
     - title: Ionic Liquids - Understanding Behavior at Electrochemical Interfaces
-      institution: GaTech Career, Research, and Innovation Development Conference
+      institution: GaTech Career, Research, and Innovation Development Conference (CRIDC)
       year: 2024
       location: Atlanta, GA
       description:
         - "<strong style='color: var(--global-theme-color);'>Poster Competition Award Recipient ($1500)</strong>"
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_CDRIC_022024.jpg
         - linkname: How it started :)
           link: /assets/pdf/talks/2024_gatech_cridc_poster.jpg
         - linkname: Poster
@@ -60,14 +106,18 @@
       description:
         - "Sponsored Poster by Pacific Northwest National Laboratory"
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_ACS_082023.jpg
         - linkname: DOI
           link: https://doi.org/10.1021/scimeetings.3c10301
 
     - title: Understanding Ionic Liquids via Polarizable Molecular Dynamics
-      institution: Pacific Northwest National Laboratory Invited Seminar
+      institution: Pacific Northwest National Laboratory (PNNL) Invited Seminar
       year: 2023
       location: Richland, WA
       linkitems:
+        - linkname: Flyer
+          link: /assets/pdf/Shehan_Parmar_Seminar_Announcement.pdf
 
     - title: Understanding the liquid structure of [N1888][TFSI] via polarizable molecular dynamics
       institution: Poster Session for GaTech College of Sciences Advisory Board Member Meeting
@@ -76,7 +126,7 @@
       linkitems:
 
     - title: Ionic Liquid Force Fields - Development and Applications
-      institution: Persson Research Group Final Summer Presentation, Lawrence Berkeley National Laboratory
+      institution: Persson Research Group Final Summer Presentation, Lawrence Berkeley National Laboratory (LBNL)
       year: 2023
       location: Berkeley, CA
       linkitems:
@@ -86,11 +136,13 @@
       year: 2023
       location: Washington, DC
       linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_CSGFAPR_072023.jpg
         - linkname: Poster
           link: /assets/pdf/talks/2023_doe_csgf_review.pdf
 
     - title: A Bayesian Data-driven Model for Quantifying Electrospray Lifetime
-      institution: International Electric Propulsion Conference
+      institution: International Electric Propulsion Conference (IEPC)
       year: 2022
       location: Boston, MA
       linkitems:
@@ -98,7 +150,7 @@
           link: /assets/pdf/talks/2022_iepc_bayesian.pdf
 
     - title: Insights from Polarizable Molecular Dynamics Simulations of HAN- and HEHN-based Ionic Liquid Mixtures
-      institution: Joint Army Navy NASA Air Force
+      institution: Joint Army Navy NASA Air Force (JANNAF)
       year: 2022
       location: Newport News, VA
 

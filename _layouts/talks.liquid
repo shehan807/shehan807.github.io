@@ -20,7 +20,18 @@ layout: default
           
           {% if entry.type == 'time_table' %}
             <ol class="bibliography">
+              {% assign talks_2025 = '' | split: '' %}
+              {% assign talks_other = '' | split: '' %}
               {% for talk in entry.contents %}
+                {% if talk.year == 2025 %}
+                  {% assign talks_2025 = talks_2025 | push: talk %}
+                {% else %}
+                  {% assign talks_other = talks_other | push: talk %}
+                {% endif %}
+              {% endfor %}
+              {% assign talks_2025_reversed = talks_2025 | reverse %}
+              {% assign sorted_talks = talks_2025_reversed | concat: talks_other %}
+              {% for talk in sorted_talks %}
                 <li>
                   <div class="row">
                     {% if talk.year %}
@@ -45,6 +56,9 @@ layout: default
                       {% if talk.institution %}
                         <div class="talk-institution">
                           {{ talk.institution }}
+                          {% if talk.month %}
+                            <span class="talk-month"> • {{ talk.month }} {{ talk.year }}</span>
+                          {% endif %}
                         </div>
                       {% endif %}
                       {% if talk.description %}
@@ -124,6 +138,12 @@ layout: default
   color: var(--global-text-color);
   margin-bottom: 0.5rem;
   margin-top: -0.25rem;
+}
+
+.talk-month {
+  color: var(--global-theme-color);
+  font-weight: 500;
+  font-size: 0.9em;
 }
 
 .publications ul.talk-description {

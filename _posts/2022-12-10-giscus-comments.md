@@ -7,6 +7,7 @@ tags: comments
 categories: sample-posts external-services
 giscus_comments: true
 related_posts: false
+published: false  # al-folio template example - commented out for clean blog
 ---
 
 This post shows how to add GISCUS comments.
