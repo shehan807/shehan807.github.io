@@ -9,8 +9,6 @@ end
 module Jekyll
   class GoogleScholarCitationsTag < Liquid::Tag
     Citations = { }
-    CACHE_FILE = '_data/scholar_cache.yml'
-    @@cache = File.exist?(CACHE_FILE) ? YAML.load_file(CACHE_FILE) || {} : {}
 
     def initialize(tag_name, params, tokens)
       super
@@ -23,14 +21,13 @@ module Jekyll
       article_id = context[@article_id.strip]
       scholar_id = context[@scholar_id.strip]
       
-      # Check if already fetched in this session
-      if GoogleScholarCitationsTag::Citations[article_id]
-        return GoogleScholarCitationsTag::Citations[article_id]
-      end
-      
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
 
       begin
+          # If the citation count has already been fetched, return it
+          if GoogleScholarCitationsTag::Citations[article_id]
+            return GoogleScholarCitationsTag::Citations[article_id]
+          end
 
           # Sleep for a random amount of time to avoid being blocked
           sleep(rand(1.5..3.5))
@@ -66,13 +63,7 @@ module Jekyll
 
       rescue Exception => e
         # Handle any errors that may occur during fetching
-        # Try to use cached value if available
-        if @@cache[article_id]
-          citation_count = @@cache[article_id]
-          puts "Using cached citation count for #{article_id}: #{citation_count}"
-        else
-          citation_count = "N/A"
-        end
+        citation_count = "N/A"
 
         # Print the error message including the exception class and message
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
@@ -80,13 +71,6 @@ module Jekyll
 
 
       GoogleScholarCitationsTag::Citations[article_id] = citation_count
-      
-      # Update cache when running locally and got a valid result
-      if ENV['GITHUB_ACTIONS'] != 'true' && citation_count != "N/A"
-        @@cache[article_id] = citation_count
-        File.write(CACHE_FILE, @@cache.to_yaml)
-      end
-      
       return "#{citation_count}"
     end
   end
