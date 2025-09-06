@@ -33,7 +33,7 @@ module Jekyll
           sleep(rand(1.5..3.5))
 
           # Fetch the article page
-          doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"))
+          doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
 
           # Attempt to extract the "Cited by n" string from the meta tags
           citation_count = 0
@@ -60,6 +60,7 @@ module Jekyll
           end
 
         citation_count = Helpers.number_to_human(citation_count, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
+        puts "Successfully fetched citation count for #{article_id}: #{citation_count}"
 
       rescue Exception => e
         # Handle any errors that may occur during fetching
@@ -67,6 +68,9 @@ module Jekyll
 
         # Print the error message including the exception class and message
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
+        puts "URL attempted: #{article_url}"
+        puts "Environment: JEKYLL_ENV=#{ENV['JEKYLL_ENV']}"
+        puts "GitHub Actions: #{ENV['GITHUB_ACTIONS']}"
       end
 
 
