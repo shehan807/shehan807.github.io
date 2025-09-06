@@ -1,6 +1,7 @@
 require "active_support/all"
 require 'nokogiri'
 require 'open-uri'
+require 'yaml'
 
 module Helpers
   extend ActiveSupport::NumberHelper
@@ -9,6 +10,7 @@ end
 module Jekyll
   class GoogleScholarCitationsTag < Liquid::Tag
     Citations = { }
+    @@cached_citations = nil
 
     def initialize(tag_name, params, tokens)
       super
@@ -17,18 +19,38 @@ module Jekyll
       @article_id = splitted[1]
     end
 
+    def load_cached_citations
+      return @@cached_citations if @@cached_citations
+
+      citations_file = '_data/citations.yml'
+      if File.exist?(citations_file)
+        begin
+          @@cached_citations = YAML.load_file(citations_file) || {}
+        rescue
+          @@cached_citations = {}
+        end
+      else
+        @@cached_citations = {}
+      end
+      
+      @@cached_citations
+    end
+
     def render(context)
       article_id = context[@article_id.strip]
       scholar_id = context[@scholar_id.strip]
       
+      # Check if we already have this citation in memory
+      if GoogleScholarCitationsTag::Citations[article_id]
+        return GoogleScholarCitationsTag::Citations[article_id]
+      end
+
+      # Load cached citations
+      cached_data = load_cached_citations
+      
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
 
       begin
-          # If the citation count has already been fetched, return it
-          if GoogleScholarCitationsTag::Citations[article_id]
-            return GoogleScholarCitationsTag::Citations[article_id]
-          end
-
           # Sleep for a random amount of time to avoid being blocked
           sleep(rand(1.5..3.5))
 
@@ -63,12 +85,16 @@ module Jekyll
 
       rescue Exception => e
         # Handle any errors that may occur during fetching
-        citation_count = "N/A"
-
-        # Print the error message including the exception class and message
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
+        
+        # Try to use cached data if available
+        if cached_data.key?(article_id) && cached_data[article_id]['citation_count']
+          citation_count = cached_data[article_id]['citation_count']
+          puts "Using cached citation count for #{article_id}: #{citation_count}"
+        else
+          citation_count = "N/A"
+        end
       end
-
 
       GoogleScholarCitationsTag::Citations[article_id] = citation_count
       return "#{citation_count}"
