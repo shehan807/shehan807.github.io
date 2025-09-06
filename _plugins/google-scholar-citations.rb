@@ -60,7 +60,6 @@ module Jekyll
           end
 
         citation_count = Helpers.number_to_human(citation_count, :format => '%n%u', :precision => 2, :units => { :thousand => 'K', :million => 'M', :billion => 'B' })
-        puts "Successfully fetched citation count for #{article_id}: #{citation_count}"
 
       rescue Exception => e
         # Handle any errors that may occur during fetching
@@ -68,9 +67,6 @@ module Jekyll
 
         # Print the error message including the exception class and message
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
-        puts "URL attempted: #{article_url}"
-        puts "Environment: JEKYLL_ENV=#{ENV['JEKYLL_ENV']}"
-        puts "GitHub Actions: #{ENV['GITHUB_ACTIONS']}"
       end
 
 
