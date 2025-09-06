@@ -33,7 +33,7 @@ module Jekyll
           sleep(rand(1.5..3.5))
 
           # Fetch the article page
-          doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Ruby/#{RUBY_VERSION}"))
+          doc = Nokogiri::HTML(URI.open(article_url, "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"))
 
           # Attempt to extract the "Cited by n" string from the meta tags
           citation_count = 0
