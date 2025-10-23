@@ -55,6 +55,15 @@
         - linkname: <i class="fa-solid fa-camera fa-xl"></i>
           link: /assets/pdf/talks/Parmar_GRC_082025.jpg
 
+    - title: "MMomenta: Multipole Moment-based Charge Assignment for Fast, Transferable Polarizable Force Fields"
+      institution: Molecular Machine Learning Conference (MoML) @ MIT
+      year: 2025
+      month: October
+      location: Cambridge, MA
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_MIT_MoML.jpg
+
     - title: Multimode Propellant Discovery - A Computational High-throughput Screening Paradigm
       institution: International Electric Propulsion Conference (IEPC)
       year: 2024
