@@ -17,6 +17,7 @@ module Jekyll
       splitted = params.split(" ").map(&:strip)
       @scholar_id = splitted[0]
       @article_id = splitted[1]
+      @entry_key = splitted[2] if splitted.length > 2
     end
 
     def load_cached_citations
@@ -39,7 +40,8 @@ module Jekyll
     def render(context)
       article_id = context[@article_id.strip]
       scholar_id = context[@scholar_id.strip]
-      
+      entry_key = @entry_key ? context[@entry_key.strip] : nil
+
       # Check if we already have this citation in memory
       if GoogleScholarCitationsTag::Citations[article_id]
         return GoogleScholarCitationsTag::Citations[article_id]
@@ -47,7 +49,15 @@ module Jekyll
 
       # Load cached citations
       cached_data = load_cached_citations
-      
+
+      # First, try to use cached data if available (use entry_key for lookup)
+      if entry_key && cached_data.key?(entry_key) && cached_data[entry_key]['citation_count']
+        citation_count = cached_data[entry_key]['citation_count']
+        puts "Using cached citation count for #{entry_key}: #{citation_count}"
+        GoogleScholarCitationsTag::Citations[article_id] = citation_count
+        return "#{citation_count}"
+      end
+
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
 
       begin
@@ -86,9 +96,12 @@ module Jekyll
       rescue Exception => e
         # Handle any errors that may occur during fetching
         puts "Error fetching citation count for #{article_id}: #{e.class} - #{e.message}"
-        
-        # Try to use cached data if available
-        if cached_data.key?(article_id) && cached_data[article_id]['citation_count']
+
+        # Try to use cached data if available (fallback with entry_key)
+        if entry_key && cached_data.key?(entry_key) && cached_data[entry_key]['citation_count']
+          citation_count = cached_data[entry_key]['citation_count']
+          puts "Using cached citation count for #{entry_key}: #{citation_count}"
+        elsif cached_data.key?(article_id) && cached_data[article_id]['citation_count']
           citation_count = cached_data[article_id]['citation_count']
           puts "Using cached citation count for #{article_id}: #{citation_count}"
         else
