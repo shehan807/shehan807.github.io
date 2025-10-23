@@ -1,0 +1,100 @@
+# Software projects configuration
+# Modern card-based layout with technology stack badges
+projects:
+  - id: 1
+    name: "atomate2"
+    url: "https://github.com/shehan807/atomate2"
+    description: "Open-source library for executing computational materials science workflows with Python"
+    role: "Contributor"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+      - name: "OpenMM"
+        icon: "fas fa-atom"
+        color: "#00A4D3"
+      - name: "jobflow"
+        icon: "fas fa-network-wired"
+        color: "#FF6B6B"
+      - name: "pymatgen"
+        icon: "fas fa-gem"
+        color: "#E74C3C"
+
+  - id: 2
+    name: "openff-PyMPFIT"
+    url: "https://github.com/shehan807/openff-PyMPFIT"
+    description: "Python framework for automated generation of optimized partial charges for molecules"
+    role: "Sole Developer"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+      - name: "SQLite"
+        icon: "fas fa-database"
+        color: "#003B57"
+      - name: "OpenFF"
+        icon: "fas fa-cube"
+        color: "#E377C2"
+      - name: "Psi4"
+        icon: "fas fa-flask"
+        color: "#9467BD"
+
+  - id: 3
+    name: "CrystaLattE"
+    url: "https://github.com/shehan807/CrystaLattE"
+    description: "Automate crystal lattice energy computation using many-body cluster expansion"
+    role: "Contributor"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+      - name: "JAX"
+        icon: "fas fa-rocket"
+        color: "#5E97F6"
+
+  - id: 4
+    name: "MDTraj"
+    url: "https://github.com/shehan807/mdtraj"
+    description: "Open-source library for analyzing molecular dynamics trajectories with Python"
+    role: "Contributor"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+
+  - id: 5
+    name: "overleaf-progress-tracker"
+    url: "https://github.com/shehan807/overleaf-progress-tracker"
+    description: "Automatically monitor and visualize writing progress for LaTeX manuscripts"
+    role: "Sole Developer"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+
+  - id: 6
+    name: "MMomentA"
+    url: "https://github.com/shehan807/MMomentA"
+    description: "Machine learning framework for computing molecular charges using multipole moments"
+    role: "Sole Developer"
+    languages:
+      - name: "Python"
+        icon: "fab fa-python"
+        color: "#3776AB"
+      - name: "PyTorch"
+        icon: "fas fa-brain"
+        color: "#EE4C2C"
+      - name: "DGL"
+        icon: "fas fa-project-diagram"
+        color: "#FF6F00"
+
+# Configuration options
+config:
+  # Maximum number of projects to display (leave blank for all)
+  max_display:
+  # Show "More Projects" button
+  show_more_button: true
+  # Button text
+  button_text: "More Software"
+  # Button link
+  button_link: "https://github.com/shehan807"

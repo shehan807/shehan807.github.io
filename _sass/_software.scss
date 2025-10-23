@@ -1,0 +1,328 @@
+/**
+ * Software page styling
+ * Modern card-based layout with prominent technology badges
+ */
+
+// Software page container
+.software-projects-main {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.software-page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+}
+
+// Grid container for cards
+.software-cards-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+// Individual software card
+.software-card {
+  // Sharper, more prominent shadow for better pop
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 2rem;
+  cursor: pointer;
+  flex: 1 1 calc(50% - 0.75rem); // Wider cards (2 columns) for better readability
+  min-width: 320px;
+  border-radius: 4px; // Sharp, crisp corners
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--global-card-bg-color);
+
+  // Crisp, defined border for sharp appearance
+  border: 2px solid var(--global-divider-color);
+
+  // Slight background lightening for light mode, darkening for dark mode
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  &:hover {
+    // Much stronger shadow on hover with sharp edges
+    box-shadow:
+      rgba(0, 0, 0, 0.15) 0px 10px 25px -5px,
+      rgba(0, 0, 0, 0.1) 0px 8px 10px -6px,
+      0 0 0 3px var(--global-theme-color);
+    transform: translateY(-6px);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.software-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.software-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 1; // Ensure content is above the gradient overlay
+}
+
+// Card header (icon + name + role badge)
+.software-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.software-card-title-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0; // Allow text truncation if needed
+}
+
+.software-repo-icon {
+  margin-right: 0.5rem;
+  min-width: 16px;
+  flex-shrink: 0;
+  fill: var(--global-text-color);
+}
+
+.software-card-name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--global-text-color);
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+
+  .software-card:hover & {
+    color: var(--global-theme-color);
+  }
+}
+
+// Card description - Allow full sentences to display
+.software-card-description {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0.75rem 0 1.25rem 0;
+  flex-grow: 1;
+  color: var(--global-text-color);
+  opacity: 1;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.01em;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // Allow up to 3 lines for full sentences
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 4.5rem; // Ensure consistent card heights
+}
+
+// Role badge - positioned in top right
+.software-card-role {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--global-theme-color);
+  background: rgba(var(--global-theme-color-rgb, 0, 118, 223), 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px; // Sharp, crisp badge
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  border: 1px solid rgba(var(--global-theme-color-rgb, 0, 118, 223), 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+// Language badges - Prominent display at bottom of card
+.software-card-languages {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.software-language-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  font-size: 1.25rem; // Icon size
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  background: rgba(var(--global-theme-color-rgb, 0, 118, 223), 0.05);
+  padding: 0.25rem 0.625rem;
+  border-radius: 3px;
+  border: 1px solid rgba(var(--global-theme-color-rgb, 0, 118, 223), 0.1);
+
+  i {
+    display: block;
+    font-size: 1.25rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    background: rgba(var(--global-theme-color-rgb, 0, 118, 223), 0.08);
+  }
+}
+
+.software-language-name {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+// More projects button
+.software-more-button {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px; // Sharp, crisp button
+  transition: all 0.3s ease;
+  background-color: var(--global-theme-color);
+  color: var(--global-bg-color);
+  border: 2px solid var(--global-theme-color);
+  letter-spacing: 0.025em;
+
+  &:hover {
+    background-color: transparent;
+    color: var(--global-theme-color);
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Responsive design
+@media (max-width: 1400px) {
+  .software-card {
+    flex: 1 1 calc(50% - 0.75rem); // Maintain 2 columns on medium screens
+  }
+}
+
+@media (max-width: 900px) {
+  .software-card {
+    flex: 1 1 100%; // Single column on smaller screens
+    padding: 1.75rem;
+  }
+
+  .software-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .software-card-title-section {
+    width: 100%;
+  }
+
+  .software-card-name {
+    font-size: 1.25rem;
+  }
+
+  .software-card-role {
+    font-size: 0.6875rem;
+    align-self: auto;
+  }
+
+  .software-card-description {
+    font-size: 0.9375rem;
+    min-height: auto;
+  }
+
+  .software-card-languages {
+    padding-top: 0.75rem;
+  }
+
+  .software-language-badge {
+    font-size: 1.125rem;
+    padding: 0.2rem 0.5rem;
+
+    i {
+      font-size: 1.125rem;
+    }
+  }
+
+  .software-language-name {
+    font-size: 0.6875rem;
+  }
+
+  .software-page-header {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .software-cards-grid {
+    gap: 1rem;
+  }
+
+  .software-card {
+    padding: 1.25rem;
+  }
+
+  .software-page-header {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 1.75rem;
+    }
+  }
+}
