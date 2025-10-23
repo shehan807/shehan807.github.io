@@ -24,6 +24,8 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
     gem 'listen'
+    gem 'activesupport'
+    gem 'nokogiri'
 end
 group :other_plugins do
     gem 'css_parser'

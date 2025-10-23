@@ -286,6 +286,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  activesupport
   benchmark
   classifier-reborn
   css_parser
@@ -309,6 +310,7 @@ DEPENDENCIES
   jekyll-twitter-plugin
   jemoji
   listen
+  nokogiri
   observer
   ostruct
   unicode_utils
