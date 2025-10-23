@@ -58,6 +58,16 @@ module Jekyll
         return "#{citation_count}"
       end
 
+      # Second, try to find cached data by Google Scholar ID
+      cached_data.each do |key, value|
+        if value['google_scholar_id'] == article_id && value['citation_count']
+          citation_count = value['citation_count']
+          puts "Using cached citation count for #{key} (matched by Scholar ID): #{citation_count}"
+          GoogleScholarCitationsTag::Citations[article_id] = citation_count
+          return "#{citation_count}"
+        end
+      end
+
       article_url = "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=#{scholar_id}&citation_for_view=#{scholar_id}:#{article_id}"
 
       begin
