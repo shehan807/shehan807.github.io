@@ -43,7 +43,7 @@
   box-shadow:
     rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  padding: 2rem;
+  padding: 1.5rem; // Reduced from 2rem for more compact layout
   cursor: pointer;
   flex: 1 1 calc(50% - 0.75rem); // Wider cards (2 columns) for better readability
   min-width: 320px;
@@ -108,7 +108,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem; // Slightly reduced for compact layout
   gap: 1rem;
 }
 
@@ -143,8 +143,8 @@
 // Card description - Allow full sentences to display
 .software-card-description {
   font-size: 1rem;
-  line-height: 1.65;
-  margin: 0.75rem 0 1.25rem 0;
+  line-height: 1.6;
+  margin: 0.5rem 0 1rem 0; // Reduced margins for compact layout
   flex-grow: 1;
   color: var(--global-text-color);
   opacity: 1;
@@ -152,10 +152,10 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.01em;
   display: -webkit-box;
-  -webkit-line-clamp: 3; // Allow up to 3 lines for full sentences
+  -webkit-line-clamp: 2; // Reduced to 2 lines for more compact cards
   -webkit-box-orient: vertical;
   overflow: hidden;
-  min-height: 4.5rem; // Ensure consistent card heights
+  min-height: 3.2rem; // Reduced min-height for compact layout
 }
 
 // Role badge - positioned in top right
@@ -182,7 +182,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 0.75rem; // Reduced for compact layout
 }
 
 .software-language-badge {
