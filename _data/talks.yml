@@ -45,6 +45,8 @@
       month: July
       location: Washington, D.C.
       linkitems:
+        - linkname: <i class="fa-solid fa-video fa-xl"></i>
+          link: https://www.krellinst.org/csgf/conf/2025/video/parmar2021
 
     - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
       institution: 2025 Chemistry and Physics of Liquids Conference Gordon Research Conference (GRC)
