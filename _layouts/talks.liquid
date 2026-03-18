@@ -20,17 +20,7 @@ layout: default
           
           {% if entry.type == 'time_table' %}
             <ol class="bibliography">
-              {% assign talks_2025 = '' | split: '' %}
-              {% assign talks_other = '' | split: '' %}
-              {% for talk in entry.contents %}
-                {% if talk.year == 2025 %}
-                  {% assign talks_2025 = talks_2025 | push: talk %}
-                {% else %}
-                  {% assign talks_other = talks_other | push: talk %}
-                {% endif %}
-              {% endfor %}
-              {% assign talks_2025_reversed = talks_2025 | reverse %}
-              {% assign sorted_talks = talks_2025_reversed | concat: talks_other %}
+              {% assign sorted_talks = entry.contents | sort: 'year' | reverse %}
               {% for talk in sorted_talks %}
                 <li>
                   <div class="row">
