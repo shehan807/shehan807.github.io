@@ -30,12 +30,6 @@ from the Krell Institute.
   }
 </style>
 
-<style>
-  .lower-font-size li {
-    font-size: 0.90em; /* You can adjust the value as needed */
-  }
-</style>
-
 <div class="desktop">
 <div class="row">
     <div class="col-5 pr-0">
