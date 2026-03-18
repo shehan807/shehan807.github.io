@@ -1,6 +1,18 @@
 - title: Invited Talks & Conference Presentations
   type: time_table
   contents:
+    - title: Understanding Ionic Liquids via Polarizable Molecular Dynamics
+      institution: Martin Bazant Group Meeting, MIT
+      year: 2026
+      month: March
+      location: Cambridge, MA
+
+    - title: "Molecular Thermodynamics of Thermoresponsive Ionic Liquid—Water Mixtures"
+      institution: Center for Computational Molecular Science and Technology (CCMST) Seminar
+      year: 2026
+      month: March
+      location: Atlanta, GA
+
     - title: "Discovering Ionic Liquid Materials for Low Temperature Water Desalination: A High-throughput Molecular Dynamics Approach"
       institution: GaTech Career, Research, and Innovation Development Conference (CRIDC)
       year: 2025
