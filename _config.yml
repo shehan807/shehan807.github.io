@@ -248,6 +248,7 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
+  - assets/jupyter/
   - vendor
 keep_files:
   - CNAME

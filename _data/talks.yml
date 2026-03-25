@@ -1,11 +1,16 @@
 - title: Invited Talks & Conference Presentations
   type: time_table
   contents:
-    - title: Understanding Ionic Liquids via Polarizable Molecular Dynamics
-      institution: Martin Bazant Group Meeting, MIT
+    - title: "PyMPFIT: Multipole moment–based partial atomic charge fitting"
+      institution: ACS Spring 2026
       year: 2026
       month: March
-      location: Cambridge, MA
+      location: Atlanta, GA
+      description:
+        - "<strong style='color: var(--global-theme-color);'>Invited to COMP Sci-Mix</strong>"
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_ACS_032026.jpeg
 
     - title: "Molecular Thermodynamics of Thermoresponsive Ionic Liquid—Water Mixtures"
       institution: Center for Computational Molecular Science and Technology (CCMST) Seminar
@@ -13,23 +18,47 @@
       month: March
       location: Atlanta, GA
 
-    - title: "Discovering Ionic Liquid Materials for Low Temperature Water Desalination: A High-throughput Molecular Dynamics Approach"
-      institution: GaTech Career, Research, and Innovation Development Conference (CRIDC)
+    - title: Understanding Ionic Liquids via Polarizable Molecular Dynamics
+      institution: Martin Bazant Group Meeting, MIT
+      year: 2026
+      month: March
+      location: Cambridge, MA
+
+    - title: "MMomenta: Multipole Moment-based Charge Assignment for Fast, Transferable Polarizable Force Fields"
+      institution: Molecular Machine Learning Conference (MoML) @ MIT
       year: 2025
-      month: February
+      month: October
+      location: Cambridge, MA
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_MIT_MoML.jpg
+
+    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
+      institution: 2025 Chemistry and Physics of Liquids Conference Gordon Research Conference (GRC)
+      year: 2025
+      month: August
+      location: Plymouth, NH
+      linkitems:
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_GRC_082025.jpg
+
+    - title: Ionic Liquid Materials Discovery - Towards First Principles-based Design
+      institution: DOE CSGF Annual Program Review
+      year: 2025
+      month: July
+      location: Washington, D.C.
+      linkitems:
+        - linkname: <i class="fa-solid fa-video fa-xl"></i>
+          link: https://www.krellinst.org/csgf/conf/2025/video/parmar2021
+
+    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
+      institution: 2025 El-Sayed Spring Research Symposium
+      year: 2025
+      month: May
       location: Atlanta, GA
       linkitems:
         - linkname: <i class="fa-solid fa-camera fa-xl"></i>
-          link: /assets/pdf/talks/Parmar_CDRIC_022025.jpg
-
-    - title: Microscopic Behavior of Battery Electrolytes through Molecular Dynamics Simulations
-      institution: SIAM Conference on Computational Science and Engineering (CSE25)
-      year: 2025
-      month: February
-      location: Fort Worth, TX
-      linkitems:
-        - linkname: Slides
-          link: /assets/pdf/talks/2025_siam_cse25_battery.pdf
+          link: /assets/pdf/talks/Parmar_GT_052025.jpg
 
     - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid (IL) Behavior via Molecular Simulation
       institution: ACS Spring 2025
@@ -42,41 +71,32 @@
         - linkname: Poster
           link: /assets/pdf/talks/2025_acs_spring_lcst_poster.pdf
 
-    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
-      institution: 2025 El-Sayed Spring Research Symposium
+    - title: Microscopic Behavior of Battery Electrolytes through Molecular Dynamics Simulations
+      institution: SIAM Conference on Computational Science and Engineering (CSE25)
       year: 2025
-      month: May
+      month: February
+      location: Fort Worth, TX
+      linkitems:
+        - linkname: Slides
+          link: /assets/pdf/talks/2025_siam_cse25_battery.pdf
+
+    - title: "Discovering Ionic Liquid Materials for Low Temperature Water Desalination: A High-throughput Molecular Dynamics Approach"
+      institution: GaTech Career, Research, and Innovation Development Conference (CRIDC)
+      year: 2025
+      month: February
       location: Atlanta, GA
       linkitems:
         - linkname: <i class="fa-solid fa-camera fa-xl"></i>
-          link: /assets/pdf/talks/Parmar_GT_052025.jpg
+          link: /assets/pdf/talks/Parmar_CDRIC_022025.jpg
 
-    - title: Ionic Liquid Materials Discovery - Towards First Principles-based Design
-      institution: DOE CSGF Annual Program Review
-      year: 2025
-      month: July
-      location: Washington, D.C.
-      linkitems:
-        - linkname: <i class="fa-solid fa-video fa-xl"></i>
-          link: https://www.krellinst.org/csgf/conf/2025/video/parmar2021
-
-    - title: Understanding Lower Critical Solution Temperature (LCST) Ionic Liquid Behavior via Molecular Simulation
-      institution: 2025 Chemistry and Physics of Liquids Conference Gordon Research Conference (GRC)
-      year: 2025
+    - title: Molecular Simulation of Lower Critical Solution Temperature Ionic Liquids
+      institution: Ionic Liquids Gordon Research Conference (GRC)
+      year: 2024
       month: August
-      location: Plymouth, NH
+      location: Newry, ME
       linkitems:
         - linkname: <i class="fa-solid fa-camera fa-xl"></i>
-          link: /assets/pdf/talks/Parmar_GRC_082025.jpg
-
-    - title: "MMomenta: Multipole Moment-based Charge Assignment for Fast, Transferable Polarizable Force Fields"
-      institution: Molecular Machine Learning Conference (MoML) @ MIT
-      year: 2025
-      month: October
-      location: Cambridge, MA
-      linkitems:
-        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
-          link: /assets/pdf/talks/Parmar_MIT_MoML.jpg
+          link: /assets/pdf/talks/Parmar_GRC_082024.jpg
 
     - title: Multimode Propellant Discovery - A Computational High-throughput Screening Paradigm
       institution: International Electric Propulsion Conference (IEPC)
@@ -89,15 +109,6 @@
           link: /assets/pdf/talks/2024_iepc_multimode.jpg
         #- linkname: Slides
         #  link: /assets/pdf/talks/2024_iepc_multimode.pdf
-
-    - title: Molecular Simulation of Lower Critical Solution Temperature Ionic Liquids
-      institution: Ionic Liquids Gordon Research Conference (GRC)
-      year: 2024
-      month: August
-      location: Newry, ME
-      linkitems:
-        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
-          link: /assets/pdf/talks/Parmar_GRC_082024.jpg
 
     - title: Ionic Liquids - Understanding Bulk and Interfacial Behavior
       institution: 52nd Annual meeting of the Southeastern Theoretical Chemistry Association (SETCA)

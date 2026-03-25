@@ -20,8 +20,7 @@ layout: default
           
           {% if entry.type == 'time_table' %}
             <ol class="bibliography">
-              {% assign sorted_talks = entry.contents | sort: 'year' | reverse %}
-              {% for talk in sorted_talks %}
+              {% for talk in entry.contents %}
                 <li>
                   <div class="row">
                     {% if talk.year %}
@@ -46,9 +45,6 @@ layout: default
                       {% if talk.institution %}
                         <div class="talk-institution">
                           {{ talk.institution }}
-                          {% if talk.month %}
-                            <span class="talk-month"> • {{ talk.month }} {{ talk.year }}</span>
-                          {% endif %}
                         </div>
                       {% endif %}
                       {% if talk.description %}
