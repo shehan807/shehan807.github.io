@@ -1,6 +1,19 @@
 - title: Invited Talks & Conference Presentations
   type: time_table
   contents:
+    - title: Discovering Thermoresponsive Ionic Liquids for Water Desalination
+      institution: GaTech Three Minute Thesis (3MT) Competition
+      year: 2026
+      month: April
+      location: Atlanta, GA
+      description:
+        - "<strong style='color: var(--global-theme-color);'>2nd Place</strong>"
+      linkitems:
+        - linkname: <i class="fa-solid fa-video fa-xl"></i>
+          link: https://mediaspace.gatech.edu/media/GT+Three+Minute+Thesis+2026/1_nttmddj2?st=3244
+        - linkname: <i class="fa-solid fa-camera fa-xl"></i>
+          link: /assets/pdf/talks/Parmar_3MT_042026.jpg
+
     - title: "PyMPFIT: Multipole moment–based partial atomic charge fitting"
       institution: ACS Spring 2026
       year: 2026
