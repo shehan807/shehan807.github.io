@@ -5,20 +5,22 @@
 @use "sass:color";
 
 :root {
-  --global-bg-color: #{$white-color};
+  --global-bg-color: #fafafa;
   --global-code-bg-color: #{$code-bg-color-light};
-  --global-text-color: #{$black-color};
+  --global-text-color: #2d3748;
+  --global-bold-color: #111827;
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$blue-color};
   --global-hover-color: #{$blue-color};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-dark};
-  --global-footer-text-color: #{$grey-color-light};
-  --global-footer-link-color: #{$white-color};
+  --global-footer-bg-color: #f0f0f0;
+  --global-footer-text-color: #6b7280;
+  --global-footer-link-color: #2d3748;
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
+  --global-divider-color: rgba(0, 0, 0, 0.08);
   --global-card-bg-color: #{$white-color};
   --global-highlight-color: #{$red-color-dark};
+  --global-grid-dot-color: #8080800a;
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -86,17 +88,19 @@
 html[data-theme="dark"] {
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
+  --global-text-color: #d1d5db;
+  --global-bold-color: #ffffff;
+  --global-text-color-light: #9ca3af;
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$cyan-color};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  --global-footer-bg-color: #0a0a0a;
+  --global-footer-text-color: #9ca3af;
+  --global-footer-link-color: #d1d5db;
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: rgba(255, 255, 255, 0.1);
   --global-card-bg-color: #{$grey-900};
+  --global-grid-dot-color: rgba(255, 255, 255, 0.05);
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},

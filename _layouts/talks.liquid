@@ -17,68 +17,65 @@ layout: default
           {% if entry.title %}
             <h3 class="talks-section-title">{{ entry.title }}</h3>
           {% endif %}
-          
+
           {% if entry.type == 'time_table' %}
             <ol class="bibliography">
               {% for talk in entry.contents %}
-                <li>
-                  <div class="row">
-                    {% if talk.year %}
-                      <div class="col-sm-2 text-center talk-year">
-                        <span class="badge font-weight-bold text-uppercase" style="background-color: var(--global-theme-color); color: white; min-width: 75px; padding: 0.5em;">
-                          {{ talk.year }}
-                        </span>
-                        {% if talk.location %}
-                          <p class="location-text">
-                            <i class="fa-solid fa-location-dot"></i>
-                            {{ talk.location }}
-                          </p>
-                        {% endif %}
-                      </div>
+                <li class="talk-card">
+                  {% if talk.title %}
+                    <h6 class="talk-title">{{ talk.title }}</h6>
+                  {% endif %}
+
+                  {% if talk.institution %}
+                    <div class="talk-institution">
+                      {{ talk.institution }}
+                    </div>
+                  {% endif %}
+
+                  <div class="talk-meta">
+                    {% if talk.month %}
+                      <span>{{ talk.month }} {{ talk.year }}</span>
+                    {% else %}
+                      <span>{{ talk.year }}</span>
                     {% endif %}
-                    
-                    <div class="col-sm-10 talk-content">
-                      {% if talk.title %}
-                        <h6 class="talk-title font-weight-bold">{{ talk.title }}</h6>
-                      {% endif %}
-                      
-                      {% if talk.institution %}
-                        <div class="talk-institution">
-                          {{ talk.institution }}
-                        </div>
-                      {% endif %}
-                      {% if talk.description %}
-                        <ul class="talk-description">
-                          {% for item in talk.description %}
-                            <li>{{ item }}</li>
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-                      {% if talk.linkitems or talk.abstract %}
-                        <div class="links">
-                          {% if talk.abstract %}
-                            <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-                          {% endif %}
-                          {% if talk.linkitems %}
-                            {% for link in talk.linkitems %}
-                              {% if link.link %}
-                                <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
-                                  {{ link.linkname | default: "Link" }}
-                                </a>
-                              {% endif %}
-                            {% endfor %}
-                          {% endif %}
-                        </div>
-                      {% endif %}
-                      
+                    {% if talk.location %}
+                      <span class="talk-location">
+                        <i class="fa-solid fa-location-dot"></i>
+                        {{ talk.location }}
+                      </span>
+                    {% endif %}
+                  </div>
+
+                  {% if talk.description %}
+                    <div class="talk-awards">
+                      {% for item in talk.description %}
+                        <span class="talk-award-item">{{ item }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
+                  {% if talk.linkitems or talk.abstract %}
+                    <div class="links">
                       {% if talk.abstract %}
-                        <!-- Hidden abstract -->
-                        <div class="abstract hidden">
-                          <p>{{ talk.abstract }}</p>
-                        </div>
+                        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+                      {% endif %}
+                      {% if talk.linkitems %}
+                        {% for link in talk.linkitems %}
+                          {% if link.link %}
+                            <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
+                              {{ link.linkname | default: "Link" }}
+                            </a>
+                          {% endif %}
+                        {% endfor %}
                       {% endif %}
                     </div>
-                  </div>
+                  {% endif %}
+
+                  {% if talk.abstract %}
+                    <!-- Hidden abstract -->
+                    <div class="abstract hidden">
+                      <p>{{ talk.abstract }}</p>
+                    </div>
+                  {% endif %}
                 </li>
               {% endfor %}
             </ol>
@@ -97,67 +94,78 @@ layout: default
 .talks-section-title {
   color: var(--global-theme-color);
   margin-bottom: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.talk-year {
-  margin-bottom: 0.5rem;
+.talk-card {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  background-color: var(--global-card-bg-color);
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.location-text {
-  font-size: 0.875rem;
-  color: var(--global-text-color);
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
-
-.talk-content {
-  padding-left: 1rem;
+.talk-card:hover {
+  border-color: var(--global-theme-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
 }
 
 .talk-title {
-  font-weight: bolder;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
 }
 
 .talk-institution {
   color: var(--global-text-color);
-  margin-bottom: 0.5rem;
-  margin-top: -0.25rem;
-}
-
-.talk-month {
-  color: var(--global-theme-color);
-  font-weight: 500;
-  font-size: 0.9em;
-}
-
-.publications ul.talk-description {
-  margin-top: 0.25rem;
-  margin-bottom: -1rem;
-  padding-left: 1.5rem;
   font-size: 0.95rem;
+  margin-bottom: 0.35rem;
 }
 
-.links {
-  margin-top: 0.5rem;
+.talk-meta {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
 }
 
-/* Add dividing lines between talks using theme color */
-.publications ol.bibliography li {
-  border-bottom: 1px solid var(--global-divider-color);
-  padding-bottom: 1rem;
+.talk-location {
+  color: var(--global-text-color-light);
+}
+
+.talk-location i {
+  margin-right: 0.2rem;
+}
+
+.talk-awards {
+  margin-top: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.talk-award-item {
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+/* Override the base bibliography li styles — cards have their own borders */
+.publications ol.bibliography li.talk-card {
+  border: 1px solid var(--global-divider-color) !important;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
 }
 
-.publications ol.bibliography li:last-child {
-  border-bottom: none;
+.publications ol.bibliography li.talk-card:last-child {
+  border: 1px solid var(--global-divider-color) !important;
 }
 
 @media (max-width: 768px) {
-  .talk-content {
-    padding-left: 0;
-    margin-top: 1rem;
+  .talk-card {
+    padding: 1rem;
   }
 }
 </style>

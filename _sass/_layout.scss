@@ -6,6 +6,28 @@ body {
   padding-bottom: 70px;
   color: var(--global-text-color);
   background-color: var(--global-bg-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // Subtle diagonal crosshatch background
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      var(--global-grid-dot-color) 0,
+      var(--global-grid-dot-color) 1px,
+      transparent 1px,
+      transparent 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      var(--global-grid-dot-color) 0,
+      var(--global-grid-dot-color) 1px,
+      transparent 1px,
+      transparent 20px
+    );
 
   h1,
   h2,
@@ -14,6 +36,52 @@ body {
   h5,
   h6 {
     scroll-margin-top: 66px;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.55rem; }
+  h4 { font-size: 1.3rem; }
+}
+
+// Gradient accent blobs behind the grid (like nima.sh)
+// Fixed position so they stay as you scroll, behind all content
+.bg-gradient-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.15;
+  }
+
+  .blob-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--global-theme-color);
+    top: -100px;
+    left: -100px;
+  }
+
+  .blob-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--global-theme-color);
+    bottom: -50px;
+    right: -50px;
+    opacity: 0.1;
   }
 }
 
@@ -35,6 +103,7 @@ body.sticky-bottom-footer {
 .profile {
   img {
     width: 100%;
+    border-radius: 6px;
   }
 }
 
