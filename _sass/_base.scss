@@ -1406,3 +1406,69 @@ ninja-keys::part(ninja-input-wrapper) {
   background-color: var(--global-theme-color);
   color: var(--global-text-color);
 }
+
+// defense-banner (temporary; remove after 2026-06-23)
+.defense-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 1.75rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: 10px;
+  background-color: var(--global-theme-color);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+
+  .defense-banner-icon {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  .defense-banner-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+    margin-right: auto;
+
+    strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+    }
+
+    span {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #000;
+    }
+  }
+
+  .defense-banner-link {
+    flex-shrink: 0;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 600;
+    white-space: nowrap;
+    color: var(--global-theme-color);
+    background-color: #fff;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    }
+  }
+
+  @media (max-width: 576px) {
+    .defense-banner-text {
+      margin-right: 0;
+      flex-basis: 100%;
+    }
+
+    .defense-banner-link {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+}
