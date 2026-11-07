@@ -48,5 +48,8 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
+          # --exclude-path: md files containing unrendered liquid tags (false positives)
+          # --exclude: external URLs that reject the headless checker but work in a browser
+          #   (conftool export is session-gated, unsplash returns 401 to bots), plus upstream
+          #   al-folio template docs whose anchors/paths drift (not our content)
+          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _pages/repositories.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --exclude 'conftool\.com/iepc2024' --exclude 'unsplash\.com' --exclude 'github\.com/alshedivat/al-folio' --verbose --no-progress './**/*.md' './**/*.html'
