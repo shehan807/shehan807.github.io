@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -34,7 +33,10 @@ layout: default
 
                   <div class="talk-meta">
                     {% if talk.month %}
-                      <span>{{ talk.month }} {{ talk.year }}</span>
+                      <span>
+                        {{- talk.month }}
+                        {{ talk.year -}}
+                      </span>
                     {% else %}
                       <span>{{ talk.year }}</span>
                     {% endif %}
@@ -62,7 +64,7 @@ layout: default
                         {% for link in talk.linkitems %}
                           {% if link.link %}
                             <a href="{{ link.link }}" target="_blank" class="btn btn-sm z-depth-0" role="button">
-                              {{ link.linkname | default: "Link" }}
+                              {{ link.linkname | default: 'Link' }}
                             </a>
                           {% endif %}
                         {% endfor %}
@@ -87,85 +89,87 @@ layout: default
 </div>
 
 <style>
-.talks-section {
-  margin-bottom: 3rem;
-}
-
-.talks-section-title {
-  color: var(--global-theme-color);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
-}
-
-.talk-card {
-  padding: 1.25rem 1.5rem;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 8px;
-  background-color: var(--global-card-bg-color);
-  margin-bottom: 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.talk-card:hover {
-  border-color: var(--global-theme-color);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-.talk-title {
-  font-weight: 700;
-  font-size: 1.05rem;
-  margin-bottom: 0.35rem;
-  line-height: 1.4;
-}
-
-.talk-institution {
-  color: var(--global-text-color);
-  font-size: 0.95rem;
-  margin-bottom: 0.35rem;
-}
-
-.talk-meta {
-  font-size: 0.85rem;
-  color: var(--global-text-color-light);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 0.25rem;
-}
-
-.talk-location {
-  color: var(--global-text-color-light);
-}
-
-.talk-location i {
-  margin-right: 0.2rem;
-}
-
-.talk-awards {
-  margin-top: 0.35rem;
-  margin-bottom: 0.25rem;
-}
-
-.talk-award-item {
-  font-size: 0.9rem;
-  display: inline-block;
-}
-
-/* Override the base bibliography li styles — cards have their own borders */
-.publications ol.bibliography li.talk-card {
-  border: 1px solid var(--global-divider-color) !important;
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.publications ol.bibliography li.talk-card:last-child {
-  border: 1px solid var(--global-divider-color) !important;
-}
-
-@media (max-width: 768px) {
-  .talk-card {
-    padding: 1rem;
+  .talks-section {
+    margin-bottom: 3rem;
   }
-}
+
+  .talks-section-title {
+    color: var(--global-theme-color);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+
+  .talk-card {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background-color: var(--global-card-bg-color);
+    margin-bottom: 1rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .talk-card:hover {
+    border-color: var(--global-theme-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .talk-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.35rem;
+    line-height: 1.4;
+  }
+
+  .talk-institution {
+    color: var(--global-text-color);
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .talk-meta {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .talk-location {
+    color: var(--global-text-color-light);
+  }
+
+  .talk-location i {
+    margin-right: 0.2rem;
+  }
+
+  .talk-awards {
+    margin-top: 0.35rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .talk-award-item {
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+
+  /* Override the base bibliography li styles — cards have their own borders */
+  .publications ol.bibliography li.talk-card {
+    border: 1px solid var(--global-divider-color) !important;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .publications ol.bibliography li.talk-card:last-child {
+    border: 1px solid var(--global-divider-color) !important;
+  }
+
+  @media (max-width: 768px) {
+    .talk-card {
+      padding: 1rem;
+    }
+  }
 </style>

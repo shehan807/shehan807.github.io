@@ -9,8 +9,9 @@ nav_order: 3
 
 <div class="software-projects-main">
 
-  {%- comment -%} Software Cards Grid {%- endcomment -%}
-  {% if site.data.software.projects %}
+{%- comment -%} Software Cards Grid {%- endcomment -%}
+{% if site.data.software.projects %}
+
   <div class="software-cards-grid">
     {% assign projects = site.data.software.projects %}
     {% if site.data.software.config.max_display %}
@@ -20,18 +21,19 @@ nav_order: 3
     {% for project in projects %}
       {% include software_card.liquid project=project %}
     {% endfor %}
+
   </div>
   {% endif %}
 
-  {%- comment -%} More Projects Button {%- endcomment -%}
-  {% if site.data.software.config.show_more_button and site.data.software.config.button_link %}
-  <a href="{{ site.data.software.config.button_link }}"
+{%- comment -%} More Projects Button {%- endcomment -%}
+{% if site.data.software.config.show_more_button and site.data.software.config.button_link %}
+<a href="{{ site.data.software.config.button_link }}"
      class="software-more-button"
      target="_blank"
      rel="noopener noreferrer">
-    {{ site.data.software.config.button_text | default: "More Projects" }}
-  </a>
-  {% endif %}
+{{ site.data.software.config.button_text | default: "More Projects" }}
+</a>
+{% endif %}
 
 </div>
 
@@ -52,6 +54,7 @@ Legacy GitHub users section - uncomment if you want to keep it
 {% if site.repo_trophies.enabled %}
 {% for user in site.data.repositories.github_users %}
 {% if site.data.repositories.github_users.size > 1 %}
+
   <h4>{{ user }}</h4>
 {% endif %}
   <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">

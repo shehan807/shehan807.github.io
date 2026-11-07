@@ -1,6 +1,6 @@
 {% comment %}
-Software card component with prominent technology badges
-Usage: {% include software_card.liquid project=project %}
+  Software card component with prominent technology badges
+  Usage: {% include software_card.liquid project=project %}
 {% endcomment %}
 
 {% assign project = include.project %}
@@ -8,7 +8,6 @@ Usage: {% include software_card.liquid project=project %}
 <div class="software-card">
   <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer" class="software-card-link">
     <div class="software-card-content">
-
       {%- comment -%} Repository icon, name, and role badge {%- endcomment -%}
       <div class="software-card-header">
         <div class="software-card-title-section">
@@ -35,16 +34,15 @@ Usage: {% include software_card.liquid project=project %}
 
       {%- comment -%} Languages/Packages at bottom {%- endcomment -%}
       {%- if project.languages and project.languages.size > 0 -%}
-      <div class="software-card-languages">
-        {%- for lang in project.languages -%}
-          <span class="software-language-badge">
-            <i class="{{ lang.icon }}" style="color: {{ lang.color }};"></i>
-            <span class="software-language-name">{{ lang.name }}</span>
-          </span>
-        {%- endfor -%}
-      </div>
+        <div class="software-card-languages">
+          {%- for lang in project.languages -%}
+            <span class="software-language-badge">
+              <i class="{{ lang.icon }}" style="color: {{ lang.color }};"></i>
+              <span class="software-language-name">{{ lang.name }}</span>
+            </span>
+          {%- endfor -%}
+        </div>
       {%- endif -%}
-
     </div>
   </a>
 </div>

@@ -214,14 +214,14 @@ ul.task-list input[type="checkbox"] {
       margin: 0;
     }
   }
-  
+
   .social-icons-under-profile {
     margin-top: 1rem;
     text-align: center;
-    
+
     .contact-icons {
       font-size: 2rem;
-      
+
       a {
         margin: 0 0.15rem;
       }
@@ -254,7 +254,7 @@ ul.task-list input[type="checkbox"] {
     width: 60%;
     margin: 0 auto 1rem auto;
     float: none !important;
-    
+
     .social-icons-under-profile {
       margin-top: 0.5rem;
     }
@@ -334,14 +334,16 @@ ul.task-list input[type="checkbox"] {
     transition: color 0.2s ease;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 50%;
       width: 0;
       height: 2px;
       background-color: var(--global-theme-color);
-      transition: width 0.25s ease, left 0.25s ease;
+      transition:
+        width 0.25s ease,
+        left 0.25s ease;
     }
 
     &:hover {
@@ -472,7 +474,7 @@ ul.task-list input[type="checkbox"] {
 .contact-note-section {
   text-align: center;
   margin-top: 2rem;
-  
+
   .contact-note {
     font-size: 0.8rem;
   }
@@ -775,7 +777,9 @@ footer.sticky-bottom {
       border: 1px solid var(--global-divider-color);
       border-radius: 8px;
       background-color: var(--global-card-bg-color);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 
       &:hover {
         border-color: var(--global-theme-color);

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I successfully [defended my dissertation](https://grad.gatech.edu/events/phd-defense-shehan-parmar) on **Tuesday, June 23, 2026**, titled *Towards Ionic Liquid Materials Discovery through High-throughput Molecular Dynamics*!
+I successfully [defended my dissertation](https://grad.gatech.edu/events/phd-defense-shehan-parmar) on **Tuesday, June 23, 2026**, titled _Towards Ionic Liquid Materials Discovery through High-throughput Molecular Dynamics_!
